@@ -10,6 +10,8 @@ generated wrist view with the region around the same-side hand in the head view.
 unlabeled video: it synthesizes wrist views for windows of Egocentric-10K, keeps the top 30% by HCC, adds them to the
 paired training data and continues training (recursive self-improvement).
 
+**Project page:** https://adonis-galaxy.github.io/Ego2Wrist/ · **Paper:** coming soon · **Weights:** see [Checkpoints](#checkpoints)
+
 This repository contains the code for the three parts of the paper: the panel diffusion model (training, sampling,
 evaluation), HCC, and the self-improvement loop, plus data conversion and indexing for the four paired datasets and
 Egocentric-10K, the trivial baselines and the paired bootstrap report of the main table.
@@ -282,6 +284,15 @@ python -m e2w.sample --lora ego2wrist_m0_ema.safetensors --out <dir> --cfg 3 --c
 ```
 
 Pretrained weights: coming soon.
+
+## License
+
+The code in this repository is released under the [Apache License 2.0](LICENSE). `third_party/training` is an
+unmodified subset of [DWM](https://github.com/snuvclab/dwm), also under Apache-2.0
+([third_party/training/LICENSE](third_party/training/LICENSE)). The released model weights are licensed under
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), because part of the training data is licensed for
+non-commercial use only. HCC uses DINOv3 and the WiLoR hand detector, which are downloaded separately and are subject
+to their own licenses (the DINOv3 License and CC BY-NC-ND 4.0); each dataset is subject to its own terms.
 
 ## Authors / citation
 
