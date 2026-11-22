@@ -10,7 +10,7 @@ generated wrist view with the region around the same-side hand in the head view.
 unlabeled video: it synthesizes wrist views for windows of Egocentric-10K, keeps the top 30% by HCC, adds them to the
 paired training data and continues training (recursive self-improvement).
 
-**Project page:** https://adonis-galaxy.github.io/Ego2Wrist/ · **Paper:** coming soon · **Weights:** see [Checkpoints](#checkpoints)
+**Project page:** https://adonis-galaxy.github.io/Ego2Wrist/ · **Paper:** coming soon · **Weights:** [Hugging Face](https://huggingface.co/adonis126/Ego2Wrist)
 
 This repository contains the code for the three parts of the paper: the panel diffusion model (training, sampling,
 evaluation), HCC, and the self-improvement loop, plus data conversion and indexing for the four paired datasets and
@@ -275,15 +275,15 @@ self-improvement rounds, start from the raw M0 weights (see "One round of recurs
 
 | Model | File | Description | Download |
 |---|---|---|---|
-| M0 (main table) | `ego2wrist_m0_ema.safetensors` | the final model, EMA weights; the main-table rows "Ego2Wrist, w=1 / w=3" | TBD |
-| M0, raw | `ego2wrist_m0_raw.safetensors` | the same step without averaging; the starting point and generator of self-improvement round 1 | TBD |
+| M0 (main table) | `ego2wrist_m0_ema.safetensors` | the final model, EMA weights; the main-table rows "Ego2Wrist, w=1 / w=3" | [download](https://huggingface.co/adonis126/Ego2Wrist/resolve/main/ego2wrist_m0_ema.safetensors) |
+| M0, raw | `ego2wrist_m0_raw.safetensors` | the same step without averaging; the starting point and generator of self-improvement round 1 | [download](https://huggingface.co/adonis126/Ego2Wrist/resolve/main/ego2wrist_m0_raw.safetensors) |
 
 ```bash
 python -m e2w.sample --lora ego2wrist_m0_ema.safetensors --out <dir> --cfg 3 --conds real \
     --max_per_dataset EgoTouch=120,HumanTouch=80,EgoViz=75,EgoPro=100
 ```
 
-Pretrained weights: coming soon.
+Both files are on [Hugging Face](https://huggingface.co/adonis126/Ego2Wrist) (`hf download adonis126/Ego2Wrist`). sha256: `0b172bc1…3950af3d` (EMA), `5b8df31c…22b6a85` (raw).
 
 ## License
 
