@@ -1,0 +1,31 @@
+# Tested with Python 3.10 and CUDA 11.8 wheels (torch 2.6.0+cu118). Install torch / torchvision for your CUDA first.
+torch==2.6.0
+torchvision==0.21.0
+diffusers==0.34.0
+transformers==4.51.3        # panel model (umT5 tokenizer). HCC needs transformers>=4.56 (DINOv3), see README
+tokenizers==0.21.1
+accelerate==1.2.1
+safetensors>=0.5
+sentencepiece>=0.2
+einops>=0.8
+easydict>=1.13
+omegaconf>=2.3
+PyYAML>=6.0
+numpy==1.26.4
+scipy>=1.15
+pandas>=2.2
+decord==0.6.0
+imageio>=2.33
+imageio-ffmpeg>=0.5
+opencv-python==4.9.0.80
+pillow>=10
+scikit-image>=0.25
+lpips==0.1.4
+# HCC and in-the-wild window extraction (WiLoR's YOLO hand detector)
+ultralytics==8.3.40
+# data conversion
+mcap==1.5.0
+mcap-protobuf-support==0.5.4
+mcap-ros2-support==0.5.7
+pyarrow>=15
+huggingface_hub>=0.30       # the `hf buckets` commands of the EgoPro / EgoViz prefetchers need a recent release
