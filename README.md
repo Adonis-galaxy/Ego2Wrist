@@ -294,6 +294,22 @@ unmodified subset of [DWM](https://github.com/snuvclab/dwm), also under Apache-2
 non-commercial use only. HCC uses DINOv3 and the WiLoR hand detector, which are downloaded separately and are subject
 to their own licenses (the DINOv3 License and CC BY-NC-ND 4.0); each dataset is subject to its own terms.
 
-## Authors / citation
+## Authors
 
-TBD
+Ziyao Zeng<sup>1</sup>, Xiatao Sun<sup>1</sup>, Hao Wang<sup>2</sup>, Ziyu Guo<sup>2</sup>, Youheng Yao<sup>1</sup>,
+Jingcheng Ni<sup>3</sup>, Shenyuan Gao<sup>4</sup>, Fengyu Yang<sup>1</sup>, Renrui Zhang<sup>5</sup>, Bangya Liu<sup>6</sup>,
+Daniel Rakita<sup>1</sup>
+
+<sup>1</sup>Yale University, <sup>2</sup>Google DeepMind, <sup>3</sup>Brown University, <sup>4</sup>NVIDIA,
+<sup>5</sup>Independent Researcher, <sup>6</sup>2077 AI
+
+## Citation
+
+```bibtex
+@article{ego2wrist2026,
+  title   = {Ego2Wrist: Bootstrapping Wrist-View Synthesis from Egocentric Video},
+  author  = {Zeng, Ziyao and Sun, Xiatao and Wang, Hao and Guo, Ziyu and Yao, Youheng and Ni, Jingcheng and Gao, Shenyuan and Yang, Fengyu and Zhang, Renrui and Liu, Bangya and Rakita, Daniel},
+  journal = {arXiv preprint},
+  year    = {2026}
+}
+```
