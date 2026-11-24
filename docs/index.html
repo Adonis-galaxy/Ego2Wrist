@@ -733,9 +733,9 @@ function arrows() {
 
 // ------------------------------------------------------------ comparison gallery
 const SETS = {
-  random: { label: "Random test clips", note: "Rows: real wrist cameras, Ego2Wrist, WorldWander fine-tuned on our data. One unpicked test clip per dataset, sampled without head guidance (w = 1).", items: [
+  random: { label: "Random test clips", note: "Rows: real wrist cameras, Ego2Wrist, WorldWander fine-tuned on our data. One unpicked test clip per dataset, sampled without head guidance (w = 1). In the HumanTouch clip, the recorded left and right wrist videos appear to be swapped: both models generate them on the opposite sides.", items: [
     ["cmp_egopro", "EgoPro", 0.424, 0.528], ["cmp_egotouch", "EgoTouch", 0.228, 0.358], ["cmp_egoviz", "EgoViz", 0.532, 0.627], ["cmp_humantouch", "HumanTouch", 0.657, 0.654]] },
-  best: { label: "Largest gaps", note: "Rows: real wrist cameras, Ego2Wrist, WorldWander fine-tuned on our data. Per dataset, the two clips with the largest gap to WorldWander among clips at or below our median LPIPS (picked, not typical); w = 1.", items: [
+  best: { label: "Largest gaps", note: "Rows: real wrist cameras, Ego2Wrist, WorldWander fine-tuned on our data. Per dataset, the two clips with the largest gap to WorldWander among clips at or below our median LPIPS (picked, not typical); w = 1. In several of these clips, WorldWander generates the two wrist views on the wrong sides.", items: [
     ["best_0", "EgoPro", 0.283, 0.544], ["best_1", "EgoPro", 0.388, 0.605], ["best_2", "EgoTouch", 0.186, 0.496], ["best_3", "EgoTouch", 0.204, 0.506],
     ["best_4", "EgoViz", 0.351, 0.570], ["best_5", "EgoViz", 0.442, 0.645], ["best_6", "HumanTouch", 0.303, 0.714], ["best_7", "HumanTouch", 0.274, 0.635]] }
 };
