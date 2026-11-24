@@ -525,8 +525,8 @@ const META = {
     { name: "Renrui Zhang", aff: "5" }, { name: "Bangya Liu", aff: "6" }, { name: "Daniel Rakita", aff: "1" }
   ],
   affiliations: "<sup>1</sup>Yale University&ensp;<sup>2</sup>Google DeepMind&ensp;<sup>3</sup>Brown University&ensp;<sup>4</sup>NVIDIA&ensp;<sup>5</sup>Independent Researcher&ensp;<sup>6</sup>2077 AI",
-  links: { paper: "", arxiv: "", code: "https://github.com/Adonis-galaxy/Ego2Wrist", weights: "https://huggingface.co/adonis126/Ego2Wrist" },
-  bibkey: "ego2wrist2026", year: "2026"
+  links: { paper: "https://arxiv.org/pdf/2611.29850", arxiv: "https://arxiv.org/abs/2611.29850", code: "https://github.com/Adonis-galaxy/Ego2Wrist", weights: "https://huggingface.co/adonis126/Ego2Wrist" },
+  bibkey: "zeng2026ego2wrist", year: "2026", arxivId: "2611.29850"
 };
 
 (function header() {
@@ -549,7 +549,7 @@ const META = {
     `<a class="btn" href="#bibtex">${ic.bib}BibTeX</a>`
   ].join("");
   const auth = META.authors.length ? META.authors.map(x => { const p = x.name.split(" "); return p.slice(-1) + ", " + p.slice(0, -1).join(" "); }).join(" and ") : "TBD";
-  document.getElementById("bib").textContent = `@article{${META.bibkey},\n  title   = {Ego2Wrist: Bootstrapping Wrist-View Synthesis from Egocentric Video},\n  author  = {${auth}},\n  journal = {arXiv preprint},\n  year    = {${META.year}}\n}`;
+  document.getElementById("bib").textContent = `@article{${META.bibkey},\n  title   = {Ego2Wrist: Bootstrapping Wrist-View Synthesis from Egocentric Video},\n  author  = {${auth}},\n  journal = {arXiv preprint arXiv:${META.arxivId}},\n  year    = {${META.year}}\n}`;
   document.getElementById("copy").addEventListener("click", e => {
     const btn = e.currentTarget, t = document.getElementById("bib").textContent;
     const ok = () => { btn.textContent = "Copied"; setTimeout(() => (btn.textContent = "Copy"), 1500); };

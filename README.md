@@ -10,7 +10,7 @@ generated wrist view with the region around the same-side hand in the head view.
 unlabeled video: it synthesizes wrist views for windows of Egocentric-10K, keeps the top 30% by HCC, adds them to the
 paired training data and continues training (recursive self-improvement).
 
-**Project page:** https://adonis-galaxy.github.io/Ego2Wrist/ · **Paper:** coming soon · **Weights:** [Hugging Face](https://huggingface.co/adonis126/Ego2Wrist)
+**Project page:** https://adonis-galaxy.github.io/Ego2Wrist/ · **Paper:** [arXiv:2611.29850](https://arxiv.org/abs/2611.29850) · **Weights:** [Hugging Face](https://huggingface.co/adonis126/Ego2Wrist)
 
 This repository contains the code for the three parts of the paper: the panel diffusion model (training, sampling,
 evaluation), HCC, and the self-improvement loop, plus data conversion and indexing for the four paired datasets and
@@ -306,10 +306,10 @@ Daniel Rakita<sup>1</sup>
 ## Citation
 
 ```bibtex
-@article{ego2wrist2026,
+@article{zeng2026ego2wrist,
   title   = {Ego2Wrist: Bootstrapping Wrist-View Synthesis from Egocentric Video},
   author  = {Zeng, Ziyao and Sun, Xiatao and Wang, Hao and Guo, Ziyu and Yao, Youheng and Ni, Jingcheng and Gao, Shenyuan and Yang, Fengyu and Zhang, Renrui and Liu, Bangya and Rakita, Daniel},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2611.29850},
   year    = {2026}
 }
 ```
