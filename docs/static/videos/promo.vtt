@@ -1,0 +1,55 @@
+WEBVTT
+
+00:00:00.500 --> 00:00:02.963
+Wrist cameras provide an action-centric view,
+
+00:00:02.963 --> 00:00:05.407
+but they are hard to collect at scale.
+
+00:00:05.857 --> 00:00:08.898
+Egocentric video is much easier to scale.
+
+00:00:09.457 --> 00:00:14.503
+We introduce Ego2Wrist: bootstrapping wrist-view synthesis from egocentric video.
+
+00:00:16.057 --> 00:00:20.370
+A video diffusion model denoises both wrist views right next to the head view,
+
+00:00:20.370 --> 00:00:23.971
+so we can synthesize wrist views for any in-the-wild video.
+
+00:00:24.421 --> 00:00:26.948
+How do we know if the in-the-wild samples are good?
+
+00:00:27.621 --> 00:00:31.470
+We introduce HCC: hand-centric cross-view consistency.
+
+00:00:31.470 --> 00:00:34.905
+It checks that the wrist view agrees with the head view around the hand.
+
+00:00:34.905 --> 00:00:36.789
+No wrist ground truth needed.
+
+00:00:38.739 --> 00:00:40.435
+So the model teaches itself:
+
+00:00:40.435 --> 00:00:43.289
+synthesize wrist views for in-the-wild video,
+
+00:00:43.289 --> 00:00:44.670
+keep the top 30%,
+
+00:00:44.670 --> 00:00:46.220
+train on them, and repeat.
+
+00:00:48.039 --> 00:00:50.300
+Every round lowers the error further,
+
+00:00:50.300 --> 00:00:52.768
+without collecting a single new wrist video.
+
+00:00:53.218 --> 00:00:56.606
+Versus WorldWander, the error drops by 28%.
+
+00:00:59.056 --> 00:01:02.041
+Paper, code, and weights are all online.
